@@ -13,10 +13,13 @@ void limpar(char tab[3][3]){
 void mostrar(char tab[3][3]){
     printf("\033[H\033[J");//É um 'clear'
 
+    printf("     ( Y )     \n( 0 )( 1 )( 2 )\n");
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
             printf("[ %c ]", tab[i][j]);
         }
+        printf("( %d )", i);
+        if(i ==1){printf("( X )");}
         printf("\n");
     }   
 }
